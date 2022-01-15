@@ -3,19 +3,23 @@
     {{ $lengthToCut := mul -1 (add (len .File.BaseFileName) 1) }}
     {{ $string := substr .RelPermalink 0 $lengthToCut }}
 
-    {{ if .IsPage }}
+    {{ if .IsPage }} <!-- if a  site -->
+        {{ $path := substr .RelPermalink 0 -1 }}
+        {{ $string := printf ".md" | printf "%s%s" $path | printf "%s%s" "/content" }}
         {{ partial "navLinks.html" $string }}
+
     {{ else if .IsSection }} <!-- if a list page -->
-        {{ $lengthToCut := mul -1 (add (len .Title) 1) }}
-        {{ $string := substr .RelPermalink 0 $lengthToCut }}
+        {{ $path := .RelPermalink }}
+        {{ $string := printf "%s" $path | printf "%s%s" "/content" }}
         {{ partial "navLinks.html" $string }}
+
     {{ else if .IsHome }}
-        {{ partial "navLinks.html" "/" }}
+        {{ partial "navLinks.html"}}
+
     {{ end }}
 
         <!-- right-most part of navbar -->
         <span class="navCredits">
-            Hugo theme created by
-            <a href="https://github.com/Yukuro/hugo-theme-shell" target="_blank" rel="noopener">Yukuro</a>
+            <a href="https://github.com/kdschneider/kdschneider.github.io" style="color:#ebdbb2">code</a>
         </span>
 </span>
