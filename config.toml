@@ -39,7 +39,7 @@ ignoreErrors = ["error-remote-getjson"]
   userName = "ks"
   pcName = "web"
   workDir = "website"
-  profile = "short_profile.txt"
+  profile = "short_bio.txt"
 
   # Note: speed at which text is displayed on the terminal
   # Note: if set to 0, typing animation will be disabled
@@ -63,7 +63,6 @@ ignoreErrors = ["error-remote-getjson"]
   # activityDelay = 5 : deprecated
 
   description = """
-
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
       ⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀
       ⠀⠀⠀⣴⠿⠏⠀⠀⠀⠀⠀⠀⢳⡀⠀
@@ -90,11 +89,13 @@ ignoreErrors = ["error-remote-getjson"]
 
   [Params.Tree]
   use = true
-  folderName = "my_stuff"
+  folderName = "content"
   # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
   files = [
-    ["my_github", "https://www.github.com/kdschneider"],
-    ["my_dotfiles", "https://www.github.com/kdschneider/dotfiles"]
+    ["about.md", "/about"],
+    ["posts/", "/post"],
+    ["my_github -> github.com/kdschneider", "https://www.github.com/kdschneider"],
+    ["my_dotfiles.zip", "https://www.github.com/kdschneider/dotfiles"]
   ]
 
 [module]
