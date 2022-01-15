@@ -94,8 +94,8 @@ ignoreErrors = ["error-remote-getjson"]
   files = [
     ["about.md", "/about"],
     ["posts/", "/post"],
-    ["my_github -> github.com/kdschneider", "https://www.github.com/kdschneider"],
-    ["my_dotfiles.zip", "https://www.github.com/kdschneider/dotfiles"]
+    ["my_github.html", "https://www.github.com/kdschneider"],
+    [".config/", "https://www.github.com/kdschneider/dotfiles"]
   ]
 
 [module]
